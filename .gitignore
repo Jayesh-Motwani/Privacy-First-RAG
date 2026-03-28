@@ -203,3 +203,5 @@ final_model/*/rng_state.pth
 # pii_bert_model/**/*.bin
 # final_model/**/*.pt
 # final_model/**/*.bin
+*.idea
+.idea/*
