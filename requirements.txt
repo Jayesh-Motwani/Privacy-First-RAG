@@ -1,15 +1,26 @@
-torch==2.7.1+cu118
+# LangChain core and integrations
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-huggingface>=0.0.3
 
-transformers==4.57.3
-datasets==4.4.2
-accelerate==1.12.0
-evaluate==0.4.6
+# Vector database
+chromadb>=0.4.0
 
-numpy==2.4.0
-pandas==2.3.3
-matplotlib==3.10.8
+# HuggingFace transformers for embeddings and NER
+transformers>=4.35.0
+sentence-transformers>=2.2.0
+torch>=2.0.0
 
-# Notes:
-# - torch version is CUDA-specific (cu118). Install via:
-# pip install torch==2.7.1+cu118 --index-url https://download.pytorch.org/whl/cu118
-# Python runtime used is 3.11.8
+# Ollama integration
+langchain-ollama>=0.1.0
+
+# PDF parsing
+pymupdf>=1.23.0
+pypdf>=3.0.0
+
+# Text processing
+regex>=2023.0.0
+
+# Utilities
+pydantic>=2.0.0
+pyyaml>=6.0

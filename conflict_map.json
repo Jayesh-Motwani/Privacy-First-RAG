@@ -1,0 +1,127 @@
+[
+  {
+    "provision_a": "HMA_Section_6",
+    "provision_b": "JJ_Act_Section_56",
+    "note": "Hindu Marriage Act guardianship vs JJ Act adoption - JJ Act provides secular adoption framework that supersedes HMA for adoption matters"
+  },
+  {
+    "provision_a": "HMA_Section_13",
+    "provision_b": "DV_Act_Section_17",
+    "note": "Divorce under HMA Section 13 may conflict with right to residence under DV Act Section 17 - married woman retains residence rights in shared household even during divorce proceedings"
+  },
+  {
+    "provision_a": "CrPC_Section_125",
+    "provision_b": "DV_Act_Section_20",
+    "note": "Maintenance under CrPC Section 125 and DV Act Section 20 can be claimed concurrently - DV Act provides additional monetary relief beyond CrPC maintenance"
+  },
+  {
+    "provision_a": "HMA_Section_9",
+    "provision_b": "DV_Act_Section_18",
+    "note": "Restitution of conjugal rights under HMA Section 9 may conflict with protection orders under DV Act Section 18 - woman's safety and protection from domestic violence takes precedence over conjugal rights"
+  },
+  {
+    "provision_a": "HAMA_Section_6",
+    "provision_b": "JJ_Act_Section_56",
+    "note": "Hindu Adoptions and Maintenance Act adoption provisions vs JJ Act - JJ Act allows inter-religion adoption while HAMA restricts to Hindus; JJ Act prevails for secular adoption"
+  },
+  {
+    "provision_a": "HAMA_Section_18",
+    "provision_b": "CrPC_Section_125",
+    "note": "Maintenance of wife under HAMA Section 18 vs CrPC Section 125 - both provisions applicable concurrently; CrPC provides quicker remedy while HAMA provides comprehensive maintenance"
+  },
+  {
+    "provision_a": "Guardianship_Act_Section_6",
+    "provision_b": "JJ_Act_Section_56",
+    "note": "Hindu Minority and Guardianship Act natural guardian rules vs JJ Act adoption - child welfare principle under JJ Act prevails over traditional guardianship rules"
+  },
+  {
+    "provision_a": "Muslim_Women_Act_Section_3",
+    "provision_b": "CrPC_Section_125",
+    "note": "Muslim Women (Protection of Rights on Divorce) Act Section 3 maintenance vs CrPC Section 125 - Supreme Court in Danial Latifi held both applicable; husband must provide reasonable maintenance during iddat and beyond"
+  },
+  {
+    "provision_a": "POCSO_Section_29",
+    "provision_b": "CrPC_Section_167",
+    "note": "POCSO Section 29 presumption of guilt vs CrPC Section 167 bail provisions - POCSO's stringent bail conditions under Section 29 apply over general CrPC bail provisions"
+  },
+  {
+    "provision_a": "DV_Act_Section_31",
+    "provision_b": "CrPC_Section_125",
+    "note": "Enforcement of protection orders under DV Act Section 31 vs maintenance enforcement under CrPC - both remedies available simultaneously; breach of protection order is cognizable offence"
+  },
+  {
+    "provision_a": "HMA_Section_11",
+    "provision_b": "SMA_Section_24",
+    "note": "Void marriage provisions differ between HMA Section 11 and Special Marriage Act Section 24 - applicable law depends on whether marriage was solemnized under Hindu law or registered under SMA"
+  },
+  {
+    "provision_a": "Hindu_Succession_Act_Section_14",
+    "provision_b": "Indian_Succession_Act_Section_15",
+    "note": "Property succession rules differ for Hindu women under HSA Section 14 vs Christian women under ISA Section 15 - personal law determines applicable succession regime; Hindu women have absolute ownership"
+  },
+  {
+    "provision_a": "DV_Act_Section_2",
+    "provision_b": "IPC_Section_498A",
+    "note": "Definition of domestic violence under DV Act Section 2 vs cruelty under IPC Section 498A - DV Act has broader definition including economic abuse; both provisions can be invoked simultaneously"
+  },
+  {
+    "provision_a": "HMA_Section_5",
+    "provision_b": "POCSO_Section_2",
+    "note": "HMA Section 5 marriageable age (18 for bride) vs POCSO Section 2 definition of child (below 18) - sexual intercourse with wife aged 15-18 may constitute rape under POCSO despite valid marriage"
+  },
+  {
+    "provision_a": "CrPC_Section_154",
+    "provision_b": "POCSO_Section_19",
+    "note": "General FIR registration under CrPC Section 154 vs mandatory reporting under POCSO Section 19 - POCSO imposes stricter timeline and penalties for failure to report child sexual abuse"
+  },
+  {
+    "provision_a": "DV_Act_Section_12",
+    "provision_b": "CrPC_Section_200",
+    "note": "Application to Magistrate under DV Act Section 12 vs complaint procedure under CrPC Section 200 - DV Act provides quicker relief without formal complaint procedure"
+  },
+  {
+    "provision_a": "HMA_Section_15",
+    "provision_b": "Hindu_Succession_Act_Section_14",
+    "note": "Remarriage rights under HMA Section 15 vs property rights under HSA Section 14 - divorced woman's property rights may be affected by remarriage timing; appeal period considerations apply"
+  },
+  {
+    "provision_a": "JJ_Act_Section_74",
+    "provision_b": "RTI_Act_Section_8",
+    "note": "JJ Act Section 74 prohibition on disclosing child identity vs RTI Act Section 8 exemptions - child identity absolutely protected even under RTI; no balancing test required"
+  },
+  {
+    "provision_a": "POCSO_Section_33",
+    "provision_b": "CrPC_Section_357",
+    "note": "POCSO Section 33 compensation powers vs CrPC Section 357 compensation - POCSO provides enhanced compensation under Section 33(8); both provisions can be used for victim compensation"
+  },
+  {
+    "provision_a": "DV_Act_Section_26",
+    "provision_b": "CrPC_Section_125",
+    "note": "DV Act Section 26 right to seek relief in other proceedings vs CrPC Section 125 - woman can seek DV Act reliefs in pending CrPC proceedings; no separate application needed"
+  },
+  {
+    "provision_a": "HMA_Section_24",
+    "provision_b": "DV_Act_Section_20",
+    "note": "Maintenance pendente lite under HMA Section 24 vs DV Act Section 20 monetary relief - DV Act provides broader relief including loss of earnings; both can be claimed but not duplicate amounts"
+  },
+  {
+    "provision_a": "SMA_Section_4",
+    "provision_b": "HMA_Section_5",
+    "note": "Conditions of marriage under SMA Section 4 vs HMA Section 5 - SMA applies to inter-faith marriages; HMA applies to Hindus; conflicting provisions resolved by determining applicable personal law"
+  },
+  {
+    "provision_a": "CrPC_Section_438",
+    "provision_b": "POCSO_Section_29",
+    "note": "Anticipatory bail under CrPC Section 438 vs POCSO Section 29 presumption - courts apply stricter scrutiny for POCSO cases; anticipatory bail rarely granted in POCSO matters"
+  },
+  {
+    "provision_a": "DV_Act_Section_19",
+    "provision_b": "Transfer_Property_Act_Section_6",
+    "note": "DV Act Section 19 residence orders vs Transfer of Property Act Section 6 - Magistrate can restrain disposal of shared household despite general property transfer rights under TPA"
+  },
+  {
+    "provision_a": "Hindu_Succession_Act_Section_6",
+    "provision_b": "Benami_Transactions_Act_Section_3",
+    "note": "HSA Section 6 coparcenary rights vs Benami Transactions Act Section 3 - property held benami cannot be claimed as coparcenary property; Benami Act overrides succession claims"
+  }
+]
