@@ -182,6 +182,24 @@ fabric.properties
 # idea folder, uncomment if you don't need it
 .idea
 .venv
-pii_bert_model
-final_model
 *.idea
+
+# Model training artifacts (keep model checkpoints but ignore large training files)
+pii_bert_model/*/optimizer.pt
+pii_bert_model/*/scheduler.pt
+pii_bert_model/*/scaler.pt
+pii_bert_model/*/trainer_state.json
+pii_bert_model/*/training_args.bin
+pii_bert_model/*/rng_state.pth
+final_model/*/optimizer.pt
+final_model/*/scheduler.pt
+final_model/*/scaler.pt
+final_model/*/trainer_state.json
+final_model/*/training_args.bin
+final_model/*/rng_state.pth
+
+# Large model files (optional - uncomment if needed)
+# pii_bert_model/**/*.pt
+# pii_bert_model/**/*.bin
+# final_model/**/*.pt
+# final_model/**/*.bin
