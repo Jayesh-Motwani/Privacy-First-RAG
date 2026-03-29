@@ -21,8 +21,8 @@ from typing import Optional
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaLLM
-from langchain.prompts import PromptTemplate
-from langchain.schema import Document
+from langchain_core.prompts import PromptTemplate
+from langchain_core.documents import Document
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline
 import torch

@@ -21,7 +21,7 @@ from typing import Optional
 
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from langchain.schema import Document
+from langchain_core.documents import Document
 import chromadb
 
 # Local imports
@@ -456,7 +456,7 @@ class LegalDocumentIngestor:
         print(f"Loading embedding model: {self.EMBEDDING_MODEL}...")
         self.embeddings = HuggingFaceEmbeddings(
             model_name=self.EMBEDDING_MODEL,
-            model_kwargs={'device': 'cpu'},
+            model_kwargs={'device': 'gpu'},
             encode_kwargs={'normalize_embeddings': True}
         )
         
