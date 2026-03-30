@@ -565,9 +565,6 @@ def run_ingestion(data_dir: str = "./data", clear_first: bool = False):
         data_dir: Directory containing PDF files
         clear_first: Whether to clear existing database before ingestion
     """
-    print("=" * 60)
-    print("LEGAL DOCUMENT INGESTION PIPELINE")
-    print("=" * 60)
     print(f"Data directory: {data_dir}")
     
     # Initialize ingestor
@@ -583,34 +580,10 @@ def run_ingestion(data_dir: str = "./data", clear_first: bool = False):
     
     # Ingest from PDFs
     total_chunks = ingestor.ingest_from_pdfs()
-    
-    print(f"\n{'='*60}")
+
     print("INGESTION COMPLETE")
-    print(f"{'='*60}")
     print(f"Total chunks stored: {total_chunks}")
     print(f"Vector store location: ./chroma_db")
-    
-    # Verify by doing a test retrieval
-    if total_chunks > 0:
-        print("\n" + "=" * 60)
-        print("TEST RETRIEVAL")
-        print("=" * 60)
-        
-        retriever = ingestor.vectorstore.as_retriever(
-            search_type="similarity",
-            search_kwargs={"k": 2}
-        )
-        
-        test_query = "maintenance for wife"
-        results = retriever.invoke(test_query)
-        
-        print(f"\nQuery: {test_query}")
-        print(f"Retrieved {len(results)} chunks")
-        for i, doc in enumerate(results, 1):
-            print(f"\n--- Result {i} ---")
-            print(f"Act: {doc.metadata.get('act_name', 'N/A')}")
-            print(f"Section: {doc.metadata.get('section_number', 'N/A')}")
-            print(f"Content: {doc.page_content[:200]}...")
     
     return ingestor
 

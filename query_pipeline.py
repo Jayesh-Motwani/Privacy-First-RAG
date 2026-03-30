@@ -464,7 +464,7 @@ class LegalQueryPipeline:
     6. LLM generation
     """
     
-    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+
     GENERATION_PROMPT = PromptTemplate(
         input_variables=["conflict_notice", "context", "question"],
         template="""You are a legal aid assistant helping women and children understand their legal rights under Indian law.
