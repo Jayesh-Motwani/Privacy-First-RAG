@@ -5,7 +5,9 @@
       "Bash(findstr *)",
       "Bash(pip list)",
       "Bash(python *)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(select-object *)",
+      "Bash(del *)"
     ]
   },
   "$version": 3

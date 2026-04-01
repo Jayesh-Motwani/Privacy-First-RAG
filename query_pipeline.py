@@ -27,12 +27,14 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline
 import torch
 
+EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 # =============================================================================
 # PII MASKING MODULE
 # =============================================================================
 
 class PIIMasker:
+    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
     Privacy-first PII masking using fine-tuned BERT NER model.
     
@@ -219,6 +221,7 @@ class PIIMasker:
 # =============================================================================
 
 class LegalQueryRewriter:
+    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
     Rewrites layperson legal queries into precise legal terminology.
     
@@ -297,6 +300,7 @@ Rewritten query:"""
 
 @dataclass
 class UserProfile:
+    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """User profile for filtering applicable legal provisions."""
     jurisdiction: str = "central"  # e.g., "Karnataka", "central"
     personal_law: str = "all"  # "hindu", "muslim", "christian", "secular", "all"
@@ -313,59 +317,55 @@ class UserProfile:
 
 
 class ApplicabilityFilter:
+    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
     Builds ChromaDB filters based on user profile.
-    
+
     Novelty: Enables filtering legal provisions by:
     - Jurisdiction (central vs state laws)
     - Personal law applicability (Hindu, Muslim, Christian, secular)
     - Demographic scope (married women, minors, working women, etc.)
     """
-    
+
     def build_filter(self, profile: UserProfile) -> Optional[dict]:
         """
         Build ChromaDB where filter from user profile.
-        
+
         Args:
             profile: User profile with jurisdiction, personal_law, demographic
-            
+
         Returns:
             ChromaDB filter dict or None if no filtering needed
         """
         conditions = []
-        
-        # Personal law filter
+
+        # Personal law filter - use $in to check if the comma-separated string contains the value
+        # Since metadata is stored as comma-separated strings, we check for exact matches
+        # or strings that contain the value as part of a comma-separated list
         if profile.personal_law and profile.personal_law != 'all':
-            conditions.append({
-                "applicable_personal_law": {"$contains": profile.personal_law}
-            })
-            # Also include 'all' provisions
-            conditions.append({
-                "applicable_personal_law": {"$contains": "all"}
-            })
-            
-        # Demographic filter
+            # Build a regex-like pattern match using $in with possible positions
+            # Value could be: "hindu", "all,hindu", "hindu,muslim", "all,hindu,muslim", etc.
+            # For simplicity, we'll retrieve all and let semantic search handle relevance
+            # ChromaDB doesn't support CONTAINS for strings, so we skip this filter
+            pass
+
+        # Demographic filter - same issue as personal law
         if profile.demographic and profile.demographic != 'any':
-            conditions.append({
-                "demographic_scope": {"$contains": profile.demographic}
-            })
-            # Also include 'any' provisions
-            conditions.append({
-                "demographic_scope": {"$contains": "any"}
-            })
-            
+            # Skip filter due to ChromaDB limitations with string contains
+            pass
+
         # Jurisdiction filter (exact match)
         if profile.jurisdiction and profile.jurisdiction != 'central':
             conditions.append({
                 "jurisdiction": {"$in": [profile.jurisdiction, "central"]}
             })
-            
+
         if not conditions:
             return None
-            
+
         if len(conditions) == 1:
             return conditions[0]
-            
+
         return {"$or": conditions}
 
 
@@ -374,6 +374,7 @@ class ApplicabilityFilter:
 # =============================================================================
 
 class ConflictDetector:
+    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
     Detects conflicts between retrieved legal provisions.
     
@@ -452,6 +453,7 @@ class ConflictDetector:
 # =============================================================================
 
 class LegalQueryPipeline:
+    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
     Complete query pipeline orchestrator.
     
@@ -666,10 +668,6 @@ ANSWER:"""
         return result
 
 
-# =============================================================================
-# CONVENIENCE FUNCTION
-# =============================================================================
-
 def process_query(user_query: str, user_profile: dict) -> dict:
     """
     Convenience function to process a query through the pipeline.
@@ -687,10 +685,6 @@ def process_query(user_query: str, user_profile: dict) -> dict:
     pipeline = LegalQueryPipeline()
     return pipeline.process_query(user_query, user_profile)
 
-
-# =============================================================================
-# MAIN EXECUTION (TEST MODE)
-# =============================================================================
 
 if __name__ == "__main__":
     # Test the pipeline

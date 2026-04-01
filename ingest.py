@@ -43,8 +43,8 @@ class LegalChunkMetadata:
     subsection: Optional[str] = None
     chunk_text: str = ""
     jurisdiction: str = "central"  # "central" | "state:<name>"
-    applicable_personal_law: list = field(default_factory=list)
-    demographic_scope: list = field(default_factory=list)
+    applicable_personal_law: str = "all"  # Comma-separated string for ChromaDB
+    demographic_scope: str = "any"  # Comma-separated string for ChromaDB
     law_type: str = "civil"  # "civil" | "criminal" | "procedural"
 
     def to_dict(self) -> dict:
@@ -301,14 +301,14 @@ class HierarchicalDocumentParser:
     def _infer_metadata(self, section_num: str, content: str) -> dict:
         """
         Infer metadata from section content using heuristics.
-        
+
         This is a key novelty module that automatically classifies:
         - Personal law applicability
         - Demographic scope
         - Law type (civil/criminal/procedural)
         """
         content_lower = content.lower()
-        
+
         # Infer personal law applicability
         applicable_personal_law = []
         if any(term in content_lower for term in ['hindu', 'hindi', 'vedic', 'aryan', 'buddhist', 'jaina', 'sikh']):
@@ -321,7 +321,7 @@ class HierarchicalDocumentParser:
             applicable_personal_law.append('secular')
         if not applicable_personal_law:
             applicable_personal_law = ['all']  # Default to all if no specific law detected
-            
+
         # Infer demographic scope
         demographic_scope = []
         if any(term in content_lower for term in ['wife', 'married woman', 'husband', 'spouse', 'conjugal']):
@@ -338,17 +338,17 @@ class HierarchicalDocumentParser:
             demographic_scope.append('widow')
         if not demographic_scope:
             demographic_scope.append('any')
-            
+
         # Infer law type
         law_type = 'civil'
         if any(term in content_lower for term in ['offence', 'punishment', 'imprisonment', 'fine', 'cognizable', 'bail', 'arrest', 'non-bailable']):
             law_type = 'criminal'
         elif any(term in content_lower for term in ['procedure', 'application', 'filing', 'jurisdiction', 'appeal', 'court', 'magistrate', 'petition']):
             law_type = 'procedural'
-            
+
         return {
-            'applicable_personal_law': applicable_personal_law,
-            'demographic_scope': demographic_scope,
+            'applicable_personal_law': ','.join(applicable_personal_law),  # Convert to comma-separated string
+            'demographic_scope': ','.join(demographic_scope),  # Convert to comma-separated string
             'law_type': law_type
         }
 
@@ -407,29 +407,61 @@ class PDFActExtractor:
     def extract_all_acts(self) -> list[tuple[str, str]]:
         """
         Extract all acts from PDFs.
-        
+
         Returns:
             List of (act_name, text) tuples
         """
         acts = []
         documents = self.pdf_extractor.extract_all()
-        
+
         for doc in documents:
-            # Extract act name from text or metadata
+            # Extract act name from text first (most reliable)
             act_name, year = self.act_name_extractor.extract(doc.text, doc.filename)
-            
-            # Use metadata title if available
-            if doc.metadata.get('title') and doc.metadata['title'] != doc.filename:
-                act_name = doc.metadata['title']
-                
-            # Add year if found
+
+            # Use metadata title only if it's better than filename
+            meta_title = doc.metadata.get('title', '')
+            if meta_title and meta_title != doc.filename and len(meta_title) > 10:
+                # Check if metadata title is more descriptive than filename
+                if len(meta_title) > len(doc.filename.replace('.pdf', '')):
+                    act_name = meta_title
+
+            # Add year if found and not already in name
             if year:
                 if str(year) not in act_name:
                     act_name = f"{act_name}, {year}"
-                    
+
+            # Final sanity check - if act name is too short or looks invalid, use filename
+            if len(act_name) < 5 or act_name.startswith('-'):
+                # Use a better fallback from filename
+                act_name = self._get_fallback_name(doc.filename)
+
             acts.append((act_name, doc.text))
-            
+
         return acts
+
+    def _get_fallback_name(self, filename: str) -> str:
+        """Get a fallback act name from filename when extraction fails."""
+        # Map known filenames to act names
+        filename_map = {
+            'a1955-25': 'Hindu Marriage Act',
+            'a2013-14': 'Sexual Harassment of Women at Workplace Act',
+            'a2016-2': 'Juvenile Justice Act',
+            'aa2012-32': 'Protection of Children from Sexual Offences Act',
+            '250883_english_01042024': 'Bharatiya Nyaya Sanhita',
+            'showfile': 'National Commission for Women Regulations',
+        }
+        
+        base_name = filename.replace('.pdf', '').lower()
+        for key, name in filename_map.items():
+            if key in base_name:
+                return name
+        
+        # Last resort: clean up filename
+        name = filename.replace('.pdf', '').replace('_', ' ').replace('-', ' ')
+        name = re.sub(r'^showfile\s*\d*\s*', '', name, flags=re.IGNORECASE)
+        name = re.sub(r'^a\d+\s*', '', name, flags=re.IGNORECASE)
+        name = re.sub(r'^aa\d+\s*', '', name, flags=re.IGNORECASE)
+        return name.strip().title() or 'Unknown Act'
 
 
 # =============================================================================
@@ -456,7 +488,7 @@ class LegalDocumentIngestor:
         print(f"Loading embedding model: {self.EMBEDDING_MODEL}...")
         self.embeddings = HuggingFaceEmbeddings(
             model_name=self.EMBEDDING_MODEL,
-            model_kwargs={'device': 'gpu'},
+            model_kwargs={'device': 'cuda'},
             encode_kwargs={'normalize_embeddings': True}
         )
         

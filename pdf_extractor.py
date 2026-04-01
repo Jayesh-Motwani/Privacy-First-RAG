@@ -323,38 +323,43 @@ class PDFTextExtractor:
 class ActNameExtractor:
     """
     Extracts the official name of an Act from document text.
-    
+
     Uses heuristics to find the act name in various formats:
     - "THE HINDU MARRIAGE ACT, 1955"
     - "Protection of Women from Domestic Violence Act, 2005"
     - "Code of Criminal Procedure, 1973"
     """
-    
+
     PATTERNS = [
-        # "THE XXX ACT, YEAR" format
-        re.compile(r'^THE\s+([A-Z][A-Za-z\s]+)\s+ACT,\s*(\d{4})', re.MULTILINE),
+        # "THE XXX ACT, YEAR" format (most common for Indian acts)
+        re.compile(r'^THE\s+([A-Z][A-Z\s]+(?:ACT|SANHITA))[,\.]?\s*(\d{4})', re.MULTILINE),
+        # "THE XXX ACT, YEAR" with longer name
+        re.compile(r'^THE\s+([A-Z][A-Za-z\s]+(?:ACT|SANHITA))[,\.]?\s*(\d{4})', re.MULTILINE),
         # "XXX Act, YEAR" format
-        re.compile(r'^([A-Z][A-Za-z\s]+(?:Act|ACT))\s*,?\s*(\d{4})', re.MULTILINE),
-        # "XXX Act, YEAR" with year first
-        re.compile(r'(\d{4})\s*[,-]?\s*([A-Z][A-Za-z\s]+(?:Act|ACT))', re.MULTILINE),
-        # Generic act name pattern
-        re.compile(r'([A-Z][A-Za-z\s]+(?:Act|ACT)[^,.]*),?\s*(\d{4})', re.MULTILINE),
+        re.compile(r'^([A-Z][A-Za-z\s]+(?:ACT|Act))[,\.]?\s*(\d{4})', re.MULTILINE),
+        # "XXX, YEAR" where XXX contains ACT
+        re.compile(r'([A-Z][A-Za-z\s]+ACT)[,\.]?\s*(\d{4})', re.MULTILINE),
+        # Generic act name pattern with year
+        re.compile(r'([A-Z][A-Za-z\s]+(?:ACT|Act)[^,.]*),?\s*(\d{4})', re.MULTILINE),
     ]
-    
+
     def extract(self, text: str, filename: str = "") -> tuple[str, Optional[int]]:
         """
         Extract act name and year from text.
-        
+
         Args:
             text: Document text
             filename: Optional filename for fallback
-            
+
         Returns:
             Tuple of (act_name, year)
         """
+        # Search in first 3000 chars (act name is usually at the beginning)
+        search_text = text[:3000]
+        
         # Try each pattern
         for pattern in self.PATTERNS:
-            match = pattern.search(text[:2000])  # Search first 2000 chars
+            match = pattern.search(search_text)
             if match:
                 groups = match.groups()
                 if len(groups) == 2:
@@ -363,14 +368,21 @@ class ActNameExtractor:
                         # Year is first
                         return groups[1].strip(), int(groups[0])
                     else:
-                        # Name is first
-                        return groups[0].strip(), int(groups[1])
-                        
+                        # Name is first - clean it up
+                        name = groups[0].strip()
+                        # Remove trailing commas or periods
+                        name = name.rstrip(',.')
+                        return name, int(groups[1])
+
         # Fallback: use filename
         if filename:
             name = filename.replace('.pdf', '').replace('_', ' ').title()
-            return name, None
-            
+            # Remove common prefixes like "showfile", "a1234", etc.
+            name = re.sub(r'^showfile\s*\d*\s*', '', name, flags=re.IGNORECASE)
+            name = re.sub(r'^a\d+\s*', '', name, flags=re.IGNORECASE)
+            name = re.sub(r'^aa\d+\s*', '', name, flags=re.IGNORECASE)
+            return name.strip(), None
+
         return "Unknown Act", None
 
 
