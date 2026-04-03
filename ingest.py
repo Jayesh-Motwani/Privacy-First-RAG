@@ -1,6 +1,5 @@
 """
 Legal Document Ingestion Pipeline
-=================================
 Parses Indian legal documents from PDF files into hierarchical chunks,
 embeds them using free HuggingFace models, and stores in ChromaDB with
 rich metadata.
@@ -27,11 +26,6 @@ import chromadb
 # Local imports
 from pdf_extractor import PDFTextExtractor, ActNameExtractor, ExtractedDocument
 
-
-# =============================================================================
-# DATA CLASSES
-# =============================================================================
-
 @dataclass
 class LegalChunkMetadata:
     """Metadata schema for legal document chunks."""
@@ -51,10 +45,6 @@ class LegalChunkMetadata:
         """Convert to dictionary for ChromaDB storage."""
         return asdict(self)
 
-
-# =============================================================================
-# HIERARCHICAL DOCUMENT PARSER
-# =============================================================================
 
 class HierarchicalDocumentParser:
     """
@@ -353,10 +343,6 @@ class HierarchicalDocumentParser:
         }
 
 
-# =============================================================================
-# CONFLICT MAP LOADER
-# =============================================================================
-
 class ConflictMapLoader:
     """Loads and manages known provision conflicts."""
     
@@ -385,10 +371,6 @@ class ConflictMapLoader:
                 return conflict
         return None
 
-
-# =============================================================================
-# PDF ACT EXTRACTOR
-# =============================================================================
 
 class PDFActExtractor:
     """
@@ -463,10 +445,6 @@ class PDFActExtractor:
         name = re.sub(r'^aa\d+\s*', '', name, flags=re.IGNORECASE)
         return name.strip().title() or 'Unknown Act'
 
-
-# =============================================================================
-# INGESTION PIPELINE
-# =============================================================================
 
 class LegalDocumentIngestor:
     """
@@ -584,10 +562,6 @@ class LegalDocumentIngestor:
             collection.delete(ids=items['ids'])
         print("Database cleared.")
 
-
-# =============================================================================
-# MAIN EXECUTION
-# =============================================================================
 
 def run_ingestion(data_dir: str = "./data", clear_first: bool = False):
     """

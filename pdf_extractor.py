@@ -1,6 +1,5 @@
 """
 PDF Text Extractor for Indian Legal Documents
-=============================================
 Extracts text from PDF files with special handling for:
 - Indian court judgments
 - Legislative acts and statutes
@@ -402,9 +401,6 @@ def extract_pdfs(data_dir: str = "./data") -> list[ExtractedDocument]:
 
 if __name__ == "__main__":
     # Test extraction
-    print("=" * 60)
-    print("PDF TEXT EXTRACTOR - TEST")
-    print("=" * 60)
     
     extractor = PDFTextExtractor("./data")
     documents = extractor.extract_all()

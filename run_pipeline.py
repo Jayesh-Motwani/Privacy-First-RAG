@@ -1,6 +1,5 @@
 """
 Legal RAG Pipeline - End-to-End Test Script
-============================================
 Demonstrates the complete pipeline from PDF ingestion to query processing.
 
 Prerequisites:
@@ -10,7 +9,7 @@ Prerequisites:
 
 Usage:
     python run_pipeline.py
-    python run_pipeline.py --data ./data --clear  # Re-ingest from PDFs
+    python run_pipeline.py --data ./data --clear
 """
 
 import sys
@@ -121,16 +120,12 @@ def run_query_demo(data_dir: str = "./data"):
     ]
     
     for i, demo in enumerate(demo_queries, 1):
-        print(f"\n{'='*60}")
         print(f"DEMO QUERY {i}: {demo['description']}")
-        print(f"{'='*60}")
         print(f"\nUser Query: {demo['query']}")
         print(f"User Profile: {demo['profile']}")
-        print("-" * 40)
         
         result = pipeline.process_query(demo['query'], demo['profile'])
-        
-        print(f"\n--- PIPELINE RESULTS ---")
+
         print(f"PII Detected: {result['pii_masked']}")
         if result['entities_found']:
             print(f"Entities Masked: {result['entities_found']}")
@@ -143,16 +138,12 @@ def run_query_demo(data_dir: str = "./data"):
             for conflict in result['conflicts']:
                 print(f"  - {conflict['provision_a']} vs {conflict['provision_b']}")
                 print(f"    {conflict['note']}")
-        
-        print(f"\n--- GENERATED ANSWER ---")
+
         print(result['answer'])
 
 
 def run_interactive_mode():
     """Run interactive query mode."""
-    print("\n" + "=" * 60)
-    print("INTERACTIVE QUERY MODE")
-    print("=" * 60)
     print("Enter your queries below. Type 'quit' to exit.\n")
     
     from query_pipeline import LegalQueryPipeline
@@ -172,7 +163,6 @@ def run_interactive_mode():
     }
     
     print(f"\nProfile set: {user_profile}")
-    print("-" * 40)
     
     while True:
         try:
@@ -185,8 +175,7 @@ def run_interactive_mode():
                 continue
                 
             result = pipeline.process_query(query, user_profile)
-            
-            print(f"\n--- ANSWER ---")
+
             print(result['answer'])
             
         except KeyboardInterrupt:
@@ -200,10 +189,6 @@ def list_documents(data_dir: str = "./data"):
     """List all PDF documents in the data directory."""
     from pathlib import Path
     from pdf_extractor import PDFTextExtractor
-    
-    print("\n" + "=" * 60)
-    print("DOCUMENTS IN DATA DIRECTORY")
-    print("=" * 60)
     
     extractor = PDFTextExtractor(data_dir)
     documents = extractor.extract_all()
@@ -307,7 +292,7 @@ def main():
         if ollama_ready:
             run_query_demo(data_dir=args.data)
         else:
-            print("\n⚠ Skipping query demo - Ollama not ready")
+            print("\n Skipping query demo - Ollama not ready")
             print("   Install Ollama and run: ollama pull qwen2.5:7b")
 
 

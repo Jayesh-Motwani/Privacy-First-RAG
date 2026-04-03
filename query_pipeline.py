@@ -29,10 +29,6 @@ import torch
 
 EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
-# =============================================================================
-# PII MASKING MODULE
-# =============================================================================
-
 class PIIMasker:
     EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
@@ -216,10 +212,6 @@ class PIIMasker:
         return masked_text, entities_found
 
 
-# =============================================================================
-# LEGAL QUERY REWRITER
-# =============================================================================
-
 class LegalQueryRewriter:
     EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
@@ -236,7 +228,6 @@ Your task is to rewrite layperson queries into precise legal terminology.
 
 Guidelines:
 1. Identify the legal issue(s) in the query
-2. Reference relevant Indian acts (DV Act, HMA, CrPC, POCSO, JJ Act, etc.)
 3. Use proper legal terminology
 4. Keep the query concise but legally precise
 5. Return ONLY the rewritten query, no explanations
@@ -294,13 +285,8 @@ Rewritten query:"""
             return masked_query.strip()
 
 
-# =============================================================================
-# APPLICABILITY FILTER
-# =============================================================================
-
 @dataclass
 class UserProfile:
-    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """User profile for filtering applicable legal provisions."""
     jurisdiction: str = "central"  # e.g., "Karnataka", "central"
     personal_law: str = "all"  # "hindu", "muslim", "christian", "secular", "all"
@@ -317,7 +303,6 @@ class UserProfile:
 
 
 class ApplicabilityFilter:
-    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
     Builds ChromaDB filters based on user profile.
 
@@ -369,12 +354,7 @@ class ApplicabilityFilter:
         return {"$or": conditions}
 
 
-# =============================================================================
-# CONFLICT DETECTION
-# =============================================================================
-
 class ConflictDetector:
-    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     """
     Detects conflicts between retrieved legal provisions.
     
@@ -447,10 +427,6 @@ class ConflictDetector:
         notice += "Please consider these tensions in your response.\n"
         return notice
 
-
-# =============================================================================
-# QUERY PIPELINE ORCHESTRATOR
-# =============================================================================
 
 class LegalQueryPipeline:
     EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
@@ -724,15 +700,11 @@ if __name__ == "__main__":
     pipeline = LegalQueryPipeline()
     
     for i, test in enumerate(test_queries, 1):
-        print(f"\n{'='*60}")
-        print(f"TEST QUERY {i}")
-        print(f"{'='*60}")
         print(f"Query: {test['query']}")
         print(f"Profile: {test['profile']}")
         
         result = pipeline.process_query(test['query'], test['profile'])
-        
-        print(f"\n--- RESULTS ---")
+
         print(f"PII Masked: {result['pii_masked']}")
         print(f"Entities Found: {result['entities_found']}")
         print(f"Rewritten Query: {result['rewritten_query']}")
