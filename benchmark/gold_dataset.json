@@ -1,0 +1,2386 @@
+[
+  {
+    "id": "Q001",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q002",
+    "raw_query": "Spouse has an affair. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13",
+        "section_title": "Divorce"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Adultery is a ground for divorce"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q003",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q004",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q005",
+    "raw_query": "Pending divorce and domestic violence. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Right to reside in a shared household under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "17",
+        "section_title": "Right to reside in a shared household"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 17 protects residence right"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_13 vs DV_Act_Section_17"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q006",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q007",
+    "raw_query": "Spouse has an affair. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13",
+        "section_title": "Divorce"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Adultery is a ground for divorce"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q008",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q009",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q010",
+    "raw_query": "Pending divorce and domestic violence. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Right to reside in a shared household under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "17",
+        "section_title": "Right to reside in a shared household"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 17 protects residence right"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_13 vs DV_Act_Section_17"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q011",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q012",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q013",
+    "raw_query": "Alimony pendente lite. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance pendente lite under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "24",
+        "section_title": "Maintenance pendente lite"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 24 allows maintenance during pendency"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q014",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q015",
+    "raw_query": "Can I get custody of my child?. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Custody orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "21",
+        "section_title": "Custody orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 21 allows temporary custody"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "complex",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q016",
+    "raw_query": "Media revealed child name in court. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Procedure for media under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "23",
+        "section_title": "Procedure for media"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 23 prohibits disclosure"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q017",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q018",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q019",
+    "raw_query": "Adopting a child of same gender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Other conditions for a valid adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "11",
+        "section_title": "Other conditions for a valid adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA restricts adopting a son if one already exists"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q020",
+    "raw_query": "Need medical expenses for injury. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Monetary reliefs under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "20",
+        "section_title": "Monetary reliefs"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 20 allows monetary relief"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q021",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q022",
+    "raw_query": "Spouse has an affair. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13",
+        "section_title": "Divorce"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Adultery is a ground for divorce"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q023",
+    "raw_query": "Alimony pendente lite. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance pendente lite under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "24",
+        "section_title": "Maintenance pendente lite"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 24 allows maintenance during pendency"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q024",
+    "raw_query": "Adopting a child of same gender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Other conditions for a valid adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "11",
+        "section_title": "Other conditions for a valid adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA restricts adopting a son if one already exists"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q025",
+    "raw_query": "Pending divorce and domestic violence. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Right to reside in a shared household under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "17",
+        "section_title": "Right to reside in a shared household"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 17 protects residence right"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_13 vs DV_Act_Section_17"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q026",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q027",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q028",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q029",
+    "raw_query": "Adopting a child of same gender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Other conditions for a valid adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "11",
+        "section_title": "Other conditions for a valid adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA restricts adopting a son if one already exists"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q030",
+    "raw_query": "I am being thrown out of my house. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Residence orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "19",
+        "section_title": "Residence orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 19 residence orders"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "complex",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q031",
+    "raw_query": "Media revealed child name in court. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Procedure for media under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "23",
+        "section_title": "Procedure for media"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 23 prohibits disclosure"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q032",
+    "raw_query": "Divorce by mutual consent. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce by mutual consent under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13B",
+        "section_title": "Divorce by mutual consent"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Requires 1 year of separation"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "complex",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q033",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q034",
+    "raw_query": "Adopting a child of same gender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Other conditions for a valid adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "11",
+        "section_title": "Other conditions for a valid adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA restricts adopting a son if one already exists"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q035",
+    "raw_query": "Need medical expenses for injury. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Monetary reliefs under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "20",
+        "section_title": "Monetary reliefs"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 20 allows monetary relief"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q036",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q037",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q038",
+    "raw_query": "Maintenance under HAMA and CrPC. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance of wife under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "18",
+        "section_title": "Maintenance of wife"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA Section 18 vs CrPC Section 125"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_18 vs CrPC_Section_125"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q039",
+    "raw_query": "Adopting a child of same gender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Other conditions for a valid adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "11",
+        "section_title": "Other conditions for a valid adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA restricts adopting a son if one already exists"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q040",
+    "raw_query": "Need medical expenses for injury. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Monetary reliefs under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "20",
+        "section_title": "Monetary reliefs"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 20 allows monetary relief"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q041",
+    "raw_query": "Teacher touched me badly. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Reporting of offences under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "19",
+        "section_title": "Reporting of offences"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Incident must be reported to SJPU"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "complex",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q042",
+    "raw_query": "Is a child born out of void marriage legitimate?. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Legitimacy of children under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "16",
+        "section_title": "Legitimacy of children"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Considered legitimate"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "complex",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q043",
+    "raw_query": "Maintenance under HAMA and CrPC. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance of wife under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "18",
+        "section_title": "Maintenance of wife"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA Section 18 vs CrPC Section 125"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_18 vs CrPC_Section_125"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q044",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q045",
+    "raw_query": "I am being thrown out of my house. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Residence orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "19",
+        "section_title": "Residence orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 19 residence orders"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "complex",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q046",
+    "raw_query": "Media revealed child name in court. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Procedure for media under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "23",
+        "section_title": "Procedure for media"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 23 prohibits disclosure"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q047",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q048",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q049",
+    "raw_query": "Natural guardian vs JJ Act adoption. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Child welfare principal under JJ Act prevails"
+    ],
+    "expected_conflicts": [
+      "Guardianship_Act_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q050",
+    "raw_query": "Pending divorce and domestic violence. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Right to reside in a shared household under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "17",
+        "section_title": "Right to reside in a shared household"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 17 protects residence right"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_13 vs DV_Act_Section_17"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q051",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q052",
+    "raw_query": "Is a child born out of void marriage legitimate?. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Legitimacy of children under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "16",
+        "section_title": "Legitimacy of children"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Considered legitimate"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "complex",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q053",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q054",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q055",
+    "raw_query": "My husband beats me. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Protection orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "18",
+        "section_title": "Protection orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 18 protection orders"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q056",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q057",
+    "raw_query": "Divorce by mutual consent. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce by mutual consent under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13B",
+        "section_title": "Divorce by mutual consent"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Requires 1 year of separation"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "complex",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q058",
+    "raw_query": "Maintenance under HAMA and CrPC. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance of wife under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "18",
+        "section_title": "Maintenance of wife"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA Section 18 vs CrPC Section 125"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_18 vs CrPC_Section_125"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q059",
+    "raw_query": "Natural guardian vs JJ Act adoption. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Child welfare principal under JJ Act prevails"
+    ],
+    "expected_conflicts": [
+      "Guardianship_Act_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q060",
+    "raw_query": "Pending divorce and domestic violence. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Right to reside in a shared household under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "17",
+        "section_title": "Right to reside in a shared household"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 17 protects residence right"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_13 vs DV_Act_Section_17"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q061",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q062",
+    "raw_query": "Spouse has an affair. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13",
+        "section_title": "Divorce"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Adultery is a ground for divorce"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q063",
+    "raw_query": "Alimony pendente lite. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance pendente lite under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "24",
+        "section_title": "Maintenance pendente lite"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 24 allows maintenance during pendency"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q064",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q065",
+    "raw_query": "Can I get custody of my child?. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Custody orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "21",
+        "section_title": "Custody orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 21 allows temporary custody"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "complex",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q066",
+    "raw_query": "Media revealed child name in court. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Procedure for media under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "23",
+        "section_title": "Procedure for media"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 23 prohibits disclosure"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q067",
+    "raw_query": "Is a child born out of void marriage legitimate?. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Legitimacy of children under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "16",
+        "section_title": "Legitimacy of children"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Considered legitimate"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "complex",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q068",
+    "raw_query": "Alimony pendente lite. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance pendente lite under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "24",
+        "section_title": "Maintenance pendente lite"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 24 allows maintenance during pendency"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q069",
+    "raw_query": "Natural guardian vs JJ Act adoption. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Child welfare principal under JJ Act prevails"
+    ],
+    "expected_conflicts": [
+      "Guardianship_Act_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q070",
+    "raw_query": "Pending divorce and domestic violence. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Right to reside in a shared household under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "17",
+        "section_title": "Right to reside in a shared household"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 17 protects residence right"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_13 vs DV_Act_Section_17"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q071",
+    "raw_query": "Teacher touched me badly. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Reporting of offences under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "19",
+        "section_title": "Reporting of offences"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Incident must be reported to SJPU"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "complex",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q072",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q073",
+    "raw_query": "Alimony pendente lite. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance pendente lite under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "24",
+        "section_title": "Maintenance pendente lite"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 24 allows maintenance during pendency"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q074",
+    "raw_query": "Adopting a child of same gender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Other conditions for a valid adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "11",
+        "section_title": "Other conditions for a valid adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HAMA restricts adopting a son if one already exists"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q075",
+    "raw_query": "My husband beats me. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Protection orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "18",
+        "section_title": "Protection orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 18 protection orders"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q076",
+    "raw_query": "Media revealed child name in court. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Procedure for media under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "23",
+        "section_title": "Procedure for media"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 23 prohibits disclosure"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q077",
+    "raw_query": "Spouse has an affair. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13",
+        "section_title": "Divorce"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Adultery is a ground for divorce"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q078",
+    "raw_query": "Alimony pendente lite. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance pendente lite under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "24",
+        "section_title": "Maintenance pendente lite"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 24 allows maintenance during pendency"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q079",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q080",
+    "raw_query": "My husband beats me. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Protection orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "18",
+        "section_title": "Protection orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 18 protection orders"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q081",
+    "raw_query": "Teacher touched me badly. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Reporting of offences under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "19",
+        "section_title": "Reporting of offences"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Incident must be reported to SJPU"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "complex",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q082",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q083",
+    "raw_query": "Alimony pendente lite. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Maintenance pendente lite under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "24",
+        "section_title": "Maintenance pendente lite"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 24 allows maintenance during pendency"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q084",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q085",
+    "raw_query": "Need medical expenses for injury. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Monetary reliefs under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "20",
+        "section_title": "Monetary reliefs"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 20 allows monetary relief"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q086",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q087",
+    "raw_query": "Divorce by mutual consent. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Divorce by mutual consent under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "13B",
+        "section_title": "Divorce by mutual consent"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Requires 1 year of separation"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "complex",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q088",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q089",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q090",
+    "raw_query": "Need medical expenses for injury. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Monetary reliefs under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "20",
+        "section_title": "Monetary reliefs"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 20 allows monetary relief"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q091",
+    "raw_query": "Bail for a serious POCSO offender. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Presumption of guilt under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "29",
+        "section_title": "Presumption of guilt"
+      }
+    ],
+    "gold_answer_key_points": [
+      "POCSO Section 29 presumption vs CrPC Section 167"
+    ],
+    "expected_conflicts": [
+      "POCSO_Section_29 vs CrPC_Section_167"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q092",
+    "raw_query": "Husband forces me to return home. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Restitution of conjugal rights under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "9",
+        "section_title": "Restitution of conjugal rights"
+      }
+    ],
+    "gold_answer_key_points": [
+      "HMA Section 9 vs DV Act Section 18"
+    ],
+    "expected_conflicts": [
+      "HMA_Section_9 vs DV_Act_Section_18"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "married_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q093",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "minor"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q094",
+    "raw_query": "Hindu male adopting a Christian child. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "JJ Act allows secular adoption"
+    ],
+    "expected_conflicts": [
+      "HAMA_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q095",
+    "raw_query": "My husband beats me. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Protection orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "18",
+        "section_title": "Protection orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 18 protection orders"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "any"
+    },
+    "complexity": "simple",
+    "domain": "domestic_violence"
+  },
+  {
+    "id": "Q096",
+    "raw_query": "Teacher touched me badly. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Reporting of offences under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Children from Sexual Offences Act, 2012",
+        "section_number": "19",
+        "section_title": "Reporting of offences"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Incident must be reported to SJPU"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "complex",
+    "domain": "child_protection"
+  },
+  {
+    "id": "Q097",
+    "raw_query": "Is a child born out of void marriage legitimate?. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Legitimacy of children under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Marriage Act, 1955",
+        "section_number": "16",
+        "section_title": "Legitimacy of children"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Considered legitimate"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "minor"
+    },
+    "complexity": "complex",
+    "domain": "marriage_and_divorce"
+  },
+  {
+    "id": "Q098",
+    "raw_query": "Claiming maintenance from father. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Order for maintenance of wives, children and parents under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "The Code of Criminal Procedure, 1973",
+        "section_number": "125",
+        "section_title": "Order for maintenance of wives, children and parents"
+      }
+    ],
+    "gold_answer_key_points": [
+      "CrPC Section 125 allows maintenance claim"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "divorced_woman"
+    },
+    "complexity": "simple",
+    "domain": "maintenance"
+  },
+  {
+    "id": "Q099",
+    "raw_query": "Natural guardian vs JJ Act adoption. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Adoption under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Hindu Adoptions and Maintenance Act, 1956",
+        "section_number": "56",
+        "section_title": "Adoption"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Child welfare principal under JJ Act prevails"
+    ],
+    "expected_conflicts": [
+      "Guardianship_Act_Section_6 vs JJ_Act_Section_56"
+    ],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "hindu",
+      "demographic": "any"
+    },
+    "complexity": "cross-act",
+    "domain": "adoption"
+  },
+  {
+    "id": "Q100",
+    "raw_query": "I am being thrown out of my house. What is the law regarding this?",
+    "expected_rewritten_query": "What are the provisions regarding Residence orders under the relevant acts?",
+    "gold_passages": [
+      {
+        "act_name": "Protection of Women from Domestic Violence Act, 2005",
+        "section_number": "19",
+        "section_title": "Residence orders"
+      }
+    ],
+    "gold_answer_key_points": [
+      "Section 19 residence orders"
+    ],
+    "expected_conflicts": [],
+    "user_profile": {
+      "jurisdiction": "central",
+      "personal_law": "any",
+      "demographic": "married_woman"
+    },
+    "complexity": "complex",
+    "domain": "domestic_violence"
+  }
+]

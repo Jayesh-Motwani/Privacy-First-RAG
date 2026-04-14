@@ -1,0 +1,62 @@
+{
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": {
+        "ingestion_time_sec": 62.6,
+        "storage_size_mb": 55.39,
+        "avg_embedding_latency_ms": 23.73,
+        "MRR": 0.0,
+        "Recall@3": 0.0,
+        "Precision@3": 0.0,
+        "Recall@5": 0.0,
+        "Precision@5": 0.0,
+        "Recall@10": 0.0,
+        "Precision@10": 0.0
+    },
+    "sentence-transformers/all-MiniLM-L6-v2": {
+        "ingestion_time_sec": 56.81,
+        "storage_size_mb": 55.31,
+        "avg_embedding_latency_ms": 13.37,
+        "MRR": 0.0,
+        "Recall@3": 0.0,
+        "Precision@3": 0.0,
+        "Recall@5": 0.0,
+        "Precision@5": 0.0,
+        "Recall@10": 0.0,
+        "Precision@10": 0.0
+    },
+    "BAAI/bge-base-en-v1.5": {
+        "ingestion_time_sec": 80.61,
+        "storage_size_mb": 67.58,
+        "avg_embedding_latency_ms": 29.5,
+        "MRR": 0.0,
+        "Recall@3": 0.0,
+        "Precision@3": 0.0,
+        "Recall@5": 0.0,
+        "Precision@5": 0.0,
+        "Recall@10": 0.0,
+        "Precision@10": 0.0
+    },
+    "intfloat/multilingual-e5-base": {
+        "ingestion_time_sec": 79.96,
+        "storage_size_mb": 67.55,
+        "avg_embedding_latency_ms": 30.32,
+        "MRR": 0.0,
+        "Recall@3": 0.0,
+        "Precision@3": 0.0,
+        "Recall@5": 0.0,
+        "Precision@5": 0.0,
+        "Recall@10": 0.0,
+        "Precision@10": 0.0
+    },
+    "law-ai/InLegalBERT": {
+        "ingestion_time_sec": 79.12,
+        "storage_size_mb": 67.55,
+        "avg_embedding_latency_ms": 28.89,
+        "MRR": 0.0,
+        "Recall@3": 0.0,
+        "Precision@3": 0.0,
+        "Recall@5": 0.0,
+        "Precision@5": 0.0,
+        "Recall@10": 0.0,
+        "Precision@10": 0.0
+    }
+}

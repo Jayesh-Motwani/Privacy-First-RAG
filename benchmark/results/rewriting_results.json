@@ -1,0 +1,16 @@
+{
+    "llama3.2:3b": {
+        "avg_latency_ms": 1017.5,
+        "semantic_similarity_to_gold": 0.489,
+        "semantic_similarity_to_raw": 0.545,
+        "query_expansion_rate": 2.3183,
+        "legal_term_recall_approx": 0.2963
+    },
+    "qwen3.5:4b": {
+        "avg_latency_ms": 5847.55,
+        "semantic_similarity_to_gold": 0.0523,
+        "semantic_similarity_to_raw": 0.0123,
+        "query_expansion_rate": 0.0,
+        "legal_term_recall_approx": 0.0
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "Full_Pipeline": {
+        "completeness_score": 0.9,
+        "latency_sec": 8.6936
+    },
+    "No_Query_Rewriting": {
+        "completeness_score": 0.93,
+        "latency_sec": 6.5473
+    },
+    "No_Conflict_Detection": {
+        "completeness_score": 0.9,
+        "latency_sec": 8.7379
+    },
+    "No_Applicability_Filtering": {
+        "completeness_score": 0.9,
+        "latency_sec": 9.0023
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Conflict_Precision": 0.0,
+    "Conflict_Recall": 0.0,
+    "False_Alarm_Rate": 0.0,
+    "avg_detection_latency_ms": 0.0101,
+    "TP": 0,
+    "FP": 0,
+    "FN": 42,
+    "TN": 58
+}

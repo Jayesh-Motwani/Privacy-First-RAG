@@ -1,0 +1,117 @@
+{
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": {
+        "HDBSCAN": {
+            "num_clusters_found": 231,
+            "silhouette_score": 0.5502,
+            "davies_bouldin": 0.5399,
+            "noise_ratio": 0.3385,
+            "latency_sec": 0.2508
+        },
+        "KMeans_k=5": {
+            "num_clusters_found": 5,
+            "silhouette_score": 0.4466,
+            "davies_bouldin": 0.7021,
+            "noise_ratio": 0.0,
+            "latency_sec": 5.1285
+        },
+        "KMeans_k=10": {
+            "num_clusters_found": 10,
+            "silhouette_score": 0.36,
+            "davies_bouldin": 0.9354,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.2673
+        }
+    },
+    "sentence-transformers/all-MiniLM-L6-v2": {
+        "HDBSCAN": {
+            "num_clusters_found": 246,
+            "silhouette_score": 0.5769,
+            "davies_bouldin": 0.5356,
+            "noise_ratio": 0.3135,
+            "latency_sec": 0.213
+        },
+        "KMeans_k=5": {
+            "num_clusters_found": 5,
+            "silhouette_score": 0.4321,
+            "davies_bouldin": 0.698,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.1609
+        },
+        "KMeans_k=10": {
+            "num_clusters_found": 10,
+            "silhouette_score": 0.3332,
+            "davies_bouldin": 1.0458,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.2398
+        }
+    },
+    "BAAI/bge-base-en-v1.5": {
+        "HDBSCAN": {
+            "num_clusters_found": 243,
+            "silhouette_score": 0.5672,
+            "davies_bouldin": 0.5616,
+            "noise_ratio": 0.3622,
+            "latency_sec": 0.2079
+        },
+        "KMeans_k=5": {
+            "num_clusters_found": 5,
+            "silhouette_score": 0.4204,
+            "davies_bouldin": 0.7207,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.162
+        },
+        "KMeans_k=10": {
+            "num_clusters_found": 10,
+            "silhouette_score": 0.3655,
+            "davies_bouldin": 0.909,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.2839
+        }
+    },
+    "intfloat/multilingual-e5-base": {
+        "HDBSCAN": {
+            "num_clusters_found": 233,
+            "silhouette_score": 0.5504,
+            "davies_bouldin": 0.5846,
+            "noise_ratio": 0.4025,
+            "latency_sec": 0.202
+        },
+        "KMeans_k=5": {
+            "num_clusters_found": 5,
+            "silhouette_score": 0.4249,
+            "davies_bouldin": 0.7499,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.1718
+        },
+        "KMeans_k=10": {
+            "num_clusters_found": 10,
+            "silhouette_score": 0.4205,
+            "davies_bouldin": 0.8624,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.2889
+        }
+    },
+    "law-ai/InLegalBERT": {
+        "HDBSCAN": {
+            "num_clusters_found": 175,
+            "silhouette_score": 0.5083,
+            "davies_bouldin": 0.5919,
+            "noise_ratio": 0.3643,
+            "latency_sec": 0.2117
+        },
+        "KMeans_k=5": {
+            "num_clusters_found": 5,
+            "silhouette_score": 0.5344,
+            "davies_bouldin": 0.6129,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.1477
+        },
+        "KMeans_k=10": {
+            "num_clusters_found": 10,
+            "silhouette_score": 0.4879,
+            "davies_bouldin": 0.615,
+            "noise_ratio": 0.0,
+            "latency_sec": 0.1906
+        }
+    }
+}
