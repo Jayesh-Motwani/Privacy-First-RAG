@@ -217,7 +217,7 @@ class LegalQueryRewriter:
     """
     Rewrites layperson legal queries into precise legal terminology.
     
-    Uses local Ollama LLM (qwen2.5:7b or mistral:7b) for query rewriting.
+    Uses local Ollama LLM (mistral:7b) for query rewriting.
     No API calls to paid services.
     """
     
@@ -242,12 +242,12 @@ Query: {masked_query}
 Rewritten query:"""
     )
     
-    def __init__(self, model_name: str = "qwen2.5:7b"):
+    def __init__(self, model_name: str = "mistral:7b"):
         """
         Initialize the query rewriter with Ollama LLM.
         
         Args:
-            model_name: Ollama model name (qwen2.5:7b or mistral:7b)
+            model_name: Ollama model name
         """
         print(f"Initializing Ollama LLM: {model_name}...")
         try:
@@ -256,10 +256,13 @@ Rewritten query:"""
                 temperature=0.3,
                 num_predict=256
             )
+            # Perform a quick health check to verify the model is pulled and fits in VRAM
+            self.llm.invoke("test")
             print("Ollama LLM initialized successfully.")
         except Exception as e:
-            print(f"Warning: Could not initialize Ollama LLM: {e}")
-            print("Query rewriting will use fallback mode.")
+            print(f"Warning: Could not initialize Ollama LLM '{model_name}': {e}")
+            print(f"Please ensure Ollama is running and the model is pulled (`ollama run {model_name}`).")
+            print("Query rewriting will use fallback mode (identity function).")
             self.llm = None
             
     def rewrite(self, masked_query: str) -> str:
@@ -281,7 +284,10 @@ Rewritten query:"""
             rewritten = self.llm.invoke(prompt)
             return rewritten.strip()
         except Exception as e:
-            print(f"Query rewriting error: {e}")
+            # If Ollama crashes during the loop, disable it to prevent terminal spam
+            print(f"Query rewriting error: {str(e)}")
+            print("Disabling LLM for remainder of session to avoid constant timeouts/OOM.")
+            self.llm = None
             return masked_query.strip()
 
 
@@ -468,8 +474,9 @@ ANSWER:"""
     def __init__(
         self,
         persist_directory: str = "./chroma_db",
-        llm_model: str = "qwen2.5:7b",
-        k_retrievals: int = 5
+        llm_model: str = "mistral:7b",
+        k_retrievals: int = 5,
+        embedding_model: str = None
     ):
         """
         Initialize the query pipeline.
@@ -478,8 +485,10 @@ ANSWER:"""
             persist_directory: ChromaDB persistence directory
             llm_model: Ollama model name for generation
             k_retrievals: Number of chunks to retrieve
+            embedding_model: The embedding model to use
         """
         self.k_retrievals = k_retrievals
+        self.embedding_model = embedding_model or self.EMBEDDING_MODEL
         
         # Initialize components
         print("Initializing Query Pipeline...")
@@ -491,9 +500,9 @@ ANSWER:"""
         self.query_rewriter = LegalQueryRewriter(model_name=llm_model)
         
         # Embeddings and Vector Store
-        print(f"Loading embeddings model: {self.EMBEDDING_MODEL}...")
+        print(f"Loading embeddings model: {self.embedding_model}...")
         self.embeddings = HuggingFaceEmbeddings(
-            model_name=self.EMBEDDING_MODEL,
+            model_name=self.embedding_model,
             model_kwargs={'device': 'cpu'},
             encode_kwargs={'normalize_embeddings': True}
         )
@@ -519,9 +528,13 @@ ANSWER:"""
                 temperature=0.2,
                 num_predict=1024
             )
+            # Perform a quick health check to verify the model is pulled and fits in VRAM
+            self.llm.invoke("test")
             print("LLM initialized successfully.")
         except Exception as e:
-            print(f"Warning: Could not initialize LLM: {e}")
+            print(f"Warning: Could not initialize LLM '{llm_model}': {e}")
+            print(f"Please ensure Ollama is running and the model is pulled (`ollama run {llm_model}`).")
+            print("System will degrade gracefully where necessary.")
             self.llm = None
             
         print("Query Pipeline ready.")
@@ -633,9 +646,11 @@ ANSWER:"""
                 result['answer'] = answer.strip()
             except Exception as e:
                 print(f"Generation error: {e}")
+                print("Disabling LLM due to fatal crash/OOM for the rest of this query session.")
+                self.llm = None
                 result['answer'] = "Unable to generate response. Please ensure Ollama is running with the required model."
         else:
-            result['answer'] = "LLM not available. Please ensure Ollama is installed and running with qwen2.5:7b or mistral:7b model."
+            result['answer'] = "LLM not available. Please ensure Ollama is installed and running with the correct model."
             
         print("\n" + "=" * 60)
         print("QUERY PROCESSING COMPLETE")

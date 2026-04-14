@@ -456,16 +456,17 @@ class LegalDocumentIngestor:
     3. Store in ChromaDB with metadata
     """
     
-    EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    DEFAULT_EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     
-    def __init__(self, persist_directory: str = "./chroma_db", data_dir: str = "./data"):
+    def __init__(self, persist_directory: str = "./chroma_db", data_dir: str = "./data", embedding_model: str = None):
         self.persist_directory = persist_directory
         self.data_dir = data_dir
+        self.embedding_model = embedding_model or self.DEFAULT_EMBEDDING_MODEL
         
         # Initialize embeddings model (free, local)
-        print(f"Loading embedding model: {self.EMBEDDING_MODEL}...")
+        print(f"Loading embedding model: {self.embedding_model}...")
         self.embeddings = HuggingFaceEmbeddings(
-            model_name=self.EMBEDDING_MODEL,
+            model_name=self.embedding_model,
             model_kwargs={'device': 'cuda'},
             encode_kwargs={'normalize_embeddings': True}
         )
@@ -555,15 +556,18 @@ class LegalDocumentIngestor:
         """Clear all documents from the database."""
         # Get the underlying collection and delete all
         client = self.vectorstore._client
-        collection = client.get_collection("legal_documents")
-        # Get all IDs and delete
-        items = collection.get(include=[])
-        if items['ids']:
-            collection.delete(ids=items['ids'])
-        print("Database cleared.")
+        try:
+            collection = client.get_collection("legal_documents")
+            # Get all IDs and delete
+            items = collection.get(include=[])
+            if items and items.get('ids'):
+                collection.delete(ids=items['ids'])
+            print("Database cleared.")
+        except Exception as e:
+            print("Database is empty or collection does not exist.")
 
 
-def run_ingestion(data_dir: str = "./data", clear_first: bool = False):
+def run_ingestion(data_dir: str = "./data", clear_first: bool = False, persist_directory: str = "./chroma_db", embedding_model: str = None):
     """
     Run the complete ingestion pipeline from PDFs.
     
@@ -575,8 +579,9 @@ def run_ingestion(data_dir: str = "./data", clear_first: bool = False):
     
     # Initialize ingestor
     ingestor = LegalDocumentIngestor(
-        persist_directory="./chroma_db",
-        data_dir=data_dir
+        persist_directory=persist_directory,
+        data_dir=data_dir,
+        embedding_model=embedding_model
     )
     
     # Clear database if requested
@@ -589,7 +594,7 @@ def run_ingestion(data_dir: str = "./data", clear_first: bool = False):
 
     print("INGESTION COMPLETE")
     print(f"Total chunks stored: {total_chunks}")
-    print(f"Vector store location: ./chroma_db")
+    print(f"Vector store location: {persist_directory}")
     
     return ingestor
 

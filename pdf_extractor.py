@@ -241,8 +241,8 @@ class PDFTextExtractor:
         
         # Analyze first few pages to detect document type
         sample_text = ""
-        for i, page in enumerate(doc[:3]):  # First 3 pages
-            sample_text += page.get_text("text")
+        for i in range(min(3, len(doc))):  # First 3 pages
+            sample_text += doc[i].get_text("text")
             
         # Detect document type
         for doc_type, pattern in self.DOCUMENT_PATTERNS.items():
